@@ -1,0 +1,10 @@
+fastapi==0.115.0          # The web framework
+uvicorn[standard]==0.30.0  # The server that runs FastAPI
+sqlalchemy==2.0.35        # Talks to the database
+asyncpg==0.29.0   # PostgreSQL driver for Python
+pydantic==2.9.2          # Data validation
+pydantic-settings==2.5.2  # Load settings from .env file
+python-jose[cryptography]==3.3.0  # JWT tokens for login
+passlib[bcrypt]==1.7.4   # Secure password hashing
+python-dotenv==1.0.1     # Read .env files
+python-multipart==0.0.9  # Required for login forms

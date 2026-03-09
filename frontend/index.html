@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>Quotes Archive — Login</title>
+  <link rel='stylesheet' href='css/style.css'>
+</head>
+<body>
+  <div class='auth-container'>
+    <h1>Quotes Archive</h1>
+
+
+    <div id='login-form'>
+      <h2>Sign In</h2>
+      <input type='text' id='login-username' placeholder='Username' />
+      <input type='password' id='login-password' placeholder='Password' />
+      <button onclick='login()'>Login</button>
+      <p>No account? <a href='#' onclick='showRegister()'>Register</a></p>
+    </div>
+
+
+    <div id='register-form' style='display:none'>
+      <h2>Create Account</h2>
+      <input type='text' id='reg-username' placeholder='Username' />
+      <input type='email' id='reg-email' placeholder='Email' />
+      <input type='password' id='reg-password' placeholder='Password' />
+      <button onclick='register()'>Register</button>
+      <p>Have an account? <a href='#' onclick='showLogin()'>Login</a></p>
+    </div>
+
+
+    <p id='auth-error' class='error'></p>
+  </div>
+  <script src='js/auth.js'></script>
+</body>
+</html>

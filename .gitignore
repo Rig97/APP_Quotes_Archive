@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+
+# Environment variables (NEVER commit passwords)
+.env
+
+# VS Code settings
+.vscode/
+
+
+# Docker
+*.log
+
