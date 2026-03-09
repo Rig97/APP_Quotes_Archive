@@ -9,6 +9,12 @@ from database import get_db
 router = APIRouter(prefix='/api/quotes', tags=['quotes'])
 
 
+@router.get('/all', response_model=List[schemas.QuoteOut])
+def get_all_quotes(db: Session = Depends(get_db), current_user=Depends(auth.get_current_user)):
+    """Return every quote from every user (authenticated users only)."""
+    return db.query(models.Quote).order_by(models.Quote.date_added.desc()).all()
+
+
 @router.get('/', response_model=List[schemas.QuoteOut])
 def get_my_quotes(db: Session = Depends(get_db), current_user=Depends(auth.get_current_user)):
     return db.query(models.Quote).filter(models.Quote.user_id == current_user.id).all()
