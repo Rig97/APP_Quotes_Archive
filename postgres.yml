@@ -1,6 +1,6 @@
 services:
   db:                              # This is the name of our service
-    image: postgres:18     # Download PostgreSQL 18 Debian 13 from Docker Hub
+    image: postgres:18     # Download PostgreSQL 18 Debian 
     container_name: quotes_db      # A friendly name for the container
     restart: always                # Auto-restart if the container crashes
     environment:
