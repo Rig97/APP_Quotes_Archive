@@ -17,7 +17,7 @@ app = FastAPI(title='Quotes Archive API', version='1.0.0')
 # (Without this, browsers block requests between different origins)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=['*'],  # In production, change this to your exact domain
+    allow_origins=["http://localhost:8080"],  # In production, change this to your exact domain
     allow_credentials=True,
     allow_methods=['*'],
     allow_headers=['*'],

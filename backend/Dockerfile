@@ -1,8 +1,8 @@
 # 1. Start from an official Python image (base layer)
-FROM python:3.11-slim
+FROM python:3.12-slim
 
 # 2. Set the working directory inside the container
-WORKDIR /app
+WORKDIR /backend
 
 # 3. Copy and install dependencies FIRST (Docker caches this layer)
 #    so if your code changes but requirements.txt doesn't, it won't reinstall

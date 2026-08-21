@@ -8,3 +8,6 @@ python-jose[cryptography]==3.3.0  # JWT tokens for login
 passlib[bcrypt]==1.7.4   # Secure password hashing
 python-dotenv==1.0.1     # Read .env files
 python-multipart==0.0.9  # Required for login forms
+psycopg2-binary
+pydantic[email]
+bcrypt==4.0.1
