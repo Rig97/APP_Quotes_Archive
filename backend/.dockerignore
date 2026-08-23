@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Environment variables (NEVER bake secrets into the image)
+.env
+
+# Git
+.git/
+.gitignore
+
+# OS
+.DS_Store
+
+# Docker
+*.log
