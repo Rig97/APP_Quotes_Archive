@@ -3,11 +3,11 @@ name: CI
 on: push
 
 jobs:
-  hello:
+  build-backend:
     runs-on: ubuntu-latest
     steps:
-      - name: Say hello
-        run: echo "Hello from GitHub Actions! The pipeline works."
+      - name: Check out the code
+        uses: actions/checkout@v4
 
-      - name: Show the date
-        run: date
+      - name: Build the backend Docker image
+        run: docker build -t quotes-backend ./backend
