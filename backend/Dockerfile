@@ -1,6 +1,14 @@
 # 1. Start from an official Python image (base layer)
 FROM python:3.12-slim
 
+# --- Build-time metadata (values are injected by CI via --build-arg) ---
+ARG GIT_SHA=unknown
+ARG BUILD_DATE=unknown
+ 
+LABEL org.opencontainers.image.revision="${GIT_SHA}"
+LABEL org.opencontainers.image.created="${BUILD_DATE}"
+LABEL org.opencontainers.image.source="https://github.com/Rig97/APP_Quotes_Archive"
+
 # 2. Set the working directory inside the container
 WORKDIR /backend
 

@@ -27,8 +27,8 @@ services:
       timeout: 5s
       retries: 5
 
-  backend:        # questo nome "backend" diventa un indirizzo di rete per usare il be 
-    build: ./backend
+  backend:        # this label "backend" becomes a name address of network to be used by the backend
+    build: ./backend       # i do not use image: test_be. This is what I'll use day-to-day — docker-compose up --build rebuilds from your local code every time.
     container_name: quotes_backend
     restart: always
     env_file:
@@ -41,6 +41,6 @@ services:
       db:
         condition: service_healthy
     
-
 volumes:
-  quotes_data:
+  quotes_data: 
+
