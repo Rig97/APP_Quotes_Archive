@@ -7,7 +7,7 @@ ARG BUILD_DATE=unknown
  
 LABEL org.opencontainers.image.revision="${GIT_SHA}"
 LABEL org.opencontainers.image.created="${BUILD_DATE}"
-LABEL org.opencontainers.image.source="https://github.com/Rig97/APP_Quotes_Archive"
+LABEL org.opencontainers.image.source="https://github.com/rigels-albarjami/APP_Quotes_Archive"
 
 # 2. Set the working directory inside the container
 WORKDIR /backend
